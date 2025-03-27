@@ -5,12 +5,13 @@ import ShopPage from "./pages/ShopPage";
 import CheckoutPage from "./pages/CheckoutPage";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";  
-
+import DarkModeToggle from "./components/DarkModeToggle";
 
 const App: React.FC = () => {
   return (
     <>
-      <Navbar/>
+      <Navbar />
+      <DarkModeToggle />
       <Routes>
         <Route path="/" element={<HomePage />}/>
         <Route path="/shop" element={<ShopPage />}/>
@@ -21,4 +22,4 @@ const App: React.FC = () => {
   );
 };
 
-export default App
+export default App;
