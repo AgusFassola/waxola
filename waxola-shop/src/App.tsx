@@ -9,8 +9,8 @@ import DarkModeToggle from "./components/DarkModeToggle";
 
 const App: React.FC = () => {
   return (
-    <>
-      <Navbar />
+    <div className="gb-gray-100 dark:bg-gray-900 min-h-screen">
+      <Navbar/>
       <DarkModeToggle />
       <Routes>
         <Route path="/" element={<HomePage />}/>
@@ -18,7 +18,7 @@ const App: React.FC = () => {
         <Route path="/checkout" element={<CheckoutPage />}/>
       </Routes>
       <Footer/>
-    </>
+    </div>
   );
 };
 
