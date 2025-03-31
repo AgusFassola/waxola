@@ -1,8 +1,9 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomaPage";
-import ShopPage from "./pages/ShopPage";
+import ShopPage from "./pages/CartPage";
 import CheckoutPage from "./pages/CheckoutPage";
+import CartPage from "./pages/CartPage";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";  
 import DarkModeToggle from "./components/DarkModeToggle";
@@ -16,6 +17,7 @@ const App: React.FC = () => {
         <Route path="/" element={<HomePage />}/>
         <Route path="/shop" element={<ShopPage />}/>
         <Route path="/checkout" element={<CheckoutPage />}/>
+        <Route path="/cart" element={<CartPage />}/>
       </Routes>
       <Footer/>
     </div>
