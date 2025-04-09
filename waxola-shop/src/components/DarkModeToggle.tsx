@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import { Fab } from '@mui/material';
+import WbSunnyIcon from '@mui/icons-material/WbSunny';
+import DarkModeIcon from '@mui/icons-material/DarkMode';
 
 const DarkModeToggle: React.FC = () => {
     const [darkMode, setDarkMode] = useState(
@@ -11,11 +14,16 @@ const DarkModeToggle: React.FC = () => {
     }, [darkMode]);
 
   return (
-    <button className='fixed buttom-4 right-4 bg-gray-800 text-white px-4 py-2 rounded'
-        onClick={()=>setDarkMode(!darkMode)}
+    <Fab
+      color='primary' onClick={() => setDarkMode(!darkMode)}
+      sx={{
+        position:'fixed', bottom:16, right:16,
+        backgroundColor:'#333', color:'white',
+        '&:hover':{ backgroundColor:'#555' },
+      }}
     >
-      {darkMode ? "☀ Modo Claro" : "🌙 Modo Oscuro"}
-    </button>
+      {darkMode ? <WbSunnyIcon/> : <DarkModeIcon />}
+    </Fab>
   )
 }
 

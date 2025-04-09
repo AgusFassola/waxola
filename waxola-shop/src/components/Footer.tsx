@@ -1,10 +1,14 @@
 import React from 'react'
+import { Box, Typography } from '@mui/material';
 
 const Footer:React.FC = () => {
   return (
-    <footer className='text-center p-4'>
+    <Box component="footer" py={4} textAlign="center">
+      <Typography variant='body2' color='textSecondary'>
         &copy; 2025 Waxola
-    </footer>
+
+      </Typography>
+    </Box>
   );
 };
 

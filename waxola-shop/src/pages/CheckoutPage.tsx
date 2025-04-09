@@ -1,9 +1,11 @@
 import React from "react";
+import { Typography, Box } from "@mui/material";
+
 const CheckoutPage: React.FC = () => {
     return(
-        <div className="text-center p-5">
-            <h1 className="text-3xl font-bold">Finalizar Compra</h1>
-        </div>
+        <Box textAlign="center" p={4}>
+            <Typography variant="h4">Finalizar Compra</Typography>
+        </Box>
     );
 };
 export default CheckoutPage;

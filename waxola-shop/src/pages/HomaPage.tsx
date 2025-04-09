@@ -1,9 +1,11 @@
 import React from "react";
+import { Typography, Box } from "@mui/material";
+
 const HomePage: React.FC = () => {
     return(
-        <div className="text-center p-5">
-            <h1 className="text-3xl font-bold">Bienvenido a Waxola</h1>
-        </div>
+        <Box textAlign="center" p={4}>
+            <Typography variant="h3">Bienvenido a Waxola</Typography>
+        </Box>
     );
 };
 export default HomePage;
