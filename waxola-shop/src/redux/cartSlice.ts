@@ -7,24 +7,16 @@ type CartItem = {
     quantity:number;
 };
 
-type CartState = {
-    items: CartItem[];
-};
-
-const initialState: CartState = {
-    items:[],
-};
-
 const cartSlice = createSlice({
     name:"cart",
-    initialState,
+    initialState:{ items:[] as CartItem[] },
     reducers:{
         addItem:(state, action: PayloadAction<CartItem>) => {
             const existingItem = state.items.find(item => item.id === action.payload.id);
             if(existingItem){
-                existingItem.quantity += 1;
+                existingItem.quantity += action.payload.quantity;
             }else{
-                state.items.push({...action.payload, quantity:1 });
+                state.items.push(action.payload);
             }
         },
         removeItem:(state, action: PayloadAction<string>) => {

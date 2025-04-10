@@ -1,6 +1,6 @@
 import React from 'react';
 import { AppBar, Toolbar, Typography, Badge, IconButton, Box, Button } from '@mui/material';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart'
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { Link } from 'react-router-dom';
 import { RootState } from '../redux/store';
 import { useSelector } from 'react-redux';
@@ -15,8 +15,8 @@ const Navbar: React.FC = () => {
                 Waxola Shop
             </Typography>
             <Box sx={{ display:'flex', gap:2 }}>
-                <Button component={Link} to="/shop" color='inherit'>
-                    Tienda
+                <Button component={Link} to="/checkout" color='inherit'>
+                    Finalizar compra
                 </Button>
                 <IconButton component={Link} to="/cart" color='inherit'>
                     <Badge badgeContent={cartItems} color='error'>
