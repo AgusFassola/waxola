@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../redux/store";
-import { removeItem } from "../redux/cartSlice";
+import { decreaseItemQuantity, removeItem } from "../redux/cartSlice";
 import { Typography, Box,Paper,Button,Grid, 
     Card, CardContent, Dialog, DialogTitle, DialogActions, Divider } from "@mui/material";
 
-const CartPage: React.FC = () => {
+const CartPage = () => {
     
     const dispatch = useDispatch();
     const cartItems = useSelector((state: RootState) => state.cart.items);
@@ -51,8 +51,8 @@ const CartPage: React.FC = () => {
                                     </CardContent>     
                                     <Button
                                             variant="contained" color="error"
-                                            onClick={() => handleDeleteClick(item.id)}
-                                    >Eliminar</Button>                           
+                                            onClick={() => dispatch(decreaseItemQuantity(item.id))}
+                                    >X</Button>                           
                                 </Card>
                             </Grid>
                         ))}

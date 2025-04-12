@@ -9,7 +9,7 @@ const products=[
     {id:"4", name:"WaxClean QuitaPega 60ml", price:2900},
 ];
 
-const HomePage: React.FC = () => {
+const HomePage = () => {
     return(
         <Grid container spacing={4}>
             {products.map((prod) => (

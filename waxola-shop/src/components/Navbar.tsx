@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { RootState } from '../redux/store';
 import { useSelector } from 'react-redux';
 
-const Navbar: React.FC = () => {
+const Navbar = () => {
     const cartItems = useSelector((state: RootState) => state.cart.items.length);
 
   return (

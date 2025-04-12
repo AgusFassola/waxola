@@ -8,7 +8,7 @@ type Props ={
   setDarkMode:(value: boolean) => void;
 };
 
-const DarkModeToggle: React.FC<Props> = ({ darkMode, setDarkMode }) => {
+const DarkModeToggle = ({ darkMode, setDarkMode } : Props ) => {
   return (
     <Fab
       color='primary' onClick={() => setDarkMode(!darkMode)}
